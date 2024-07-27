@@ -1,0 +1,37 @@
+***** Explaination according to code *****
+
+The code begins by including the necessary header files: <iostream> for input/output operations and <fstream> for file handling.
+
+A class named shopping is defined, which encapsulates various functions and variables related to a shopping system.
+
+Within the shopping class, the private member variables include pcode (product code), price (product price), dis (discount on the product),
+ and pname (product name).
+
+The public member functions of the shopping class are declared, including menu(), administrator(), buyer(), add(), edit(), rem(), List(),
+ and receipt().
+
+The menu() function is defined. It presents a main menu to the user and prompts for a choice. It then uses a switch statement to handle 
+different choices. If the choice is 1, it prompts for email and password for administrator login. If the login is successful, it calls the
+administrator() function. If the choice is 2, it calls the buyer() function. If the choice is 3, it exits the program. The function uses a 
+label m to implement a loop that allows the user to make multiple selections from the main menu.
+
+The administrator() function is defined. It presents an administrator menu and prompts for a choice. It then uses a switch statement to
+handle different choices. If the choice is 1, it calls the add() function to add a new product. If the choice is 2, it calls the edit()
+function to modify a product. If the choice is 3, it calls the rem() function to delete a product. If the choice is 4, it returns to the 
+main menu by calling the menu() function. The function uses a label m to implement a loop that allows the administrator to make multiple 
+selections from the administrator menu.
+
+The buyer() function is defined. It presents a buyer menu and prompts for a choice. It then uses a switch statement to handle different choices.
+If the choice is 1, it calls the receipt() function to generate a receipt for the buyer. If the choice is 2, it returns to the main menu by
+ calling the menu() function. The function uses a label m to implement a loop that allows the buyer to make multiple selections from the buyer menu.
+
+The add() function is defined. It prompts the user to enter details of a new product (product code, name, price, and discount).
+ It then opens a file named "database.txt" and checks if the file exists. If the file doesn't exist, it creates the file and writes
+ the product details to it. If the file exists, it reads the existing records and checks if the product code already exists. 
+If the product code is found, it prompts the user to enter the details again. If the product code is not found, it appends the
+\ new product details to the file. Finally, it displays a message indicating that the record was inserted.
+
+The edit() function is defined. It prompts the user to enter the product code of the record to be modified. It then opens the "database.txt"
+ file and reads the records. If the product code matches the entered code, it prompts the user to enter the new details for the
+ product (code, name, price, and discount). It writes the modified record to a new file named "database1.txt". After processing all records,
+ it closes the files, removes the original "database.txt" file, and renames
